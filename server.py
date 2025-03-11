@@ -10,7 +10,7 @@ win32gui.ShowWindow(the_program_to_hide , win32con.SW_HIDE)
 app = Flask(__name__)
 CORS(app, origins=["chrome-extension://*"]) 
 
-CLIENT_ID = "1346156506818543727"
+CLIENT_ID = "PUT_YOUR_CLIENT_ID_HERE" #Create an application at the Discord Developer Portal, copy its client id and paste it into here.
 
 try:
     rpc = Presence(CLIENT_ID)
