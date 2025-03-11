@@ -2,6 +2,10 @@ from flask import Flask, request, jsonify
 from flask_cors import CORS
 from pypresence import Presence
 import time
+import win32gui, win32con
+
+the_program_to_hide = win32gui.GetForegroundWindow()
+win32gui.ShowWindow(the_program_to_hide , win32con.SW_HIDE)
 
 app = Flask(__name__)
 CORS(app, origins=["chrome-extension://*"]) 
